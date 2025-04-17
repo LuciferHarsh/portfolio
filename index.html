@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsh Rajput Portfolio</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- ========== HERO SECTION / HEADER ========== -->
+  <header class="hero-section">
+    <nav class="top-nav">
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero-gilber">
+      <div class="hero-left">
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/harshrajput" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn">
+          </a>
+          <a href="mailto:harsh567rajput@gmail.com">
+            <img src="images/gmail.png" alt="Gmail">
+          </a>
+          <a href="https://www.instagram.com/_harsh_.0201/" target="_blank">
+            <img src="images/instagram.png" alt="Instagram">
+          </a>
+        </div>
+
+        <div class="intro">
+          <p class="title">Web Developer</p>
+          <h1>Harsh <span class="highlight">Rajput</span>.</h1>
+          <p class="subtitle">Crafting clean and powerful digital experiences that leave a mark.</p>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="images/portfolio-hero-section.png" alt="Harsh Rajput">
+      </div>
+    </section>
+
+    <div class="scroll-hint">
+      <a href="#experience">
+        <p>Scroll for details</p>
+        <span class="down-arrow">↓</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section id="experience" class="experience-section">
+    <div class="experience-left">
+      <h1 class="years">1<span class="red-dot">.</span></h1>
+      <p class="label">Years<br>Experience<br>Working</p>
+    </div>
+
+    <div class="experience-right">
+      <h2>Still Learning. Still Growing.</h2>
+      <p class="description">
+        I love turning clean ideas into functional, beautiful interfaces. Every challenge has taught me something better.
+      </p>
+
+      <div class="skill-bar">
+        <label>React.js <span>70%</span></label>
+        <div class="bar-bg"><div class="bar-fill" data-percent="70"></div></div>
+      </div>
+
+      <div class="skill-bar">
+        <label>Node.js <span>55%</span></label>
+        <div class="bar-bg"><div class="bar-fill" data-percent="55"></div></div>
+      </div>
+
+      <div class="skill-bar">
+        <label>JavaScript <span>80%</span></label>
+        <div class="bar-bg"><div class="bar-fill" data-percent="80"></div></div>
+      </div>
+
+      <div class="skill-bar">
+        <label>Html/Css <span>85%</span></label>
+        <div class="bar-bg"><div class="bar-fill" data-percent="85"></div></div>
+      </div>
+
+      <div class="skill-bar">
+        <label>Cms (WordPress, Shopify) <span>90%</span></label>
+        <div class="bar-bg"><div class="bar-fill" data-percent="90"></div></div>
+      </div>
+    </div>
+
+    <!-- Scroll hint to Work Process section -->
+    <div class="scroll-hint">
+      <a href="#work-process">
+        <p>Scroll for details</p>
+        <span class="down-arrow">↓</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== WORK PROCESS SECTION ========== -->
+  <section class="process-section" id="work-process">
+    <p class="section-subtitle">Work Process</p>
+    <h2 class="section-title">How I Work on Projects</h2>
+
+    <div class="process-grid">
+      <div class="process-card">
+        <img src="images/puzzle-piece.png" alt="Strategy Icon" />
+        <h3>Strategy</h3>
+        <p>I understand your goals, audience, and define a strong plan.</p>
+      </div>
+
+      <div class="process-card">
+        <img src="images/web-design.png" alt="Design Icon" />
+        <h3>Design</h3>
+        <p>Clean, user-first interface that matches brand and function.</p>
+      </div>
+
+      <div class="process-card">
+        <img src="images/web.png" alt="Development Icon" />
+        <h3>Development</h3>
+        <p>Responsive, fast, and scalable frontend development.</p>
+      </div>
+
+      <div class="process-card">
+        <img src="images/quality.png" alt="Quality Check Icon" />
+        <h3>Quality Check</h3>
+        <p>Pixel-perfect testing, optimization, and performance checks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SCRIPTS ========== -->
+
+  <!-- Skill Bar Fill Animation -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const bars = document.querySelectorAll('.bar-fill');
+      bars.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          bar.style.width = bar.dataset.percent + '%';
+        }
+      });
+    });
+  </script>
+
+  <!-- Scroll to top on reload -->
+  <script>
+    window.onload = function () {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      }, 0);
+    };
+  </script>
+
+</body>
+</html>
